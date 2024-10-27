@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Machine Learning Roadmap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            background: #f0f2f5;
+            color: #1a1a1a;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            padding: 40px 20px;
+            border-radius: 20px;
+            color: white;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .section {
+            background: white;
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section h2 {
+            color: #4f46e5;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h2::before {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 3px;
+            background: #4f46e5;
+            border-radius: 3px;
+        }
+
+        .resources {
+            display: grid;
+            gap: 15px;
+        }
+
+        .resource-link {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 12px;
+            color: #1e293b;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .resource-link:hover {
+            background: #f1f5f9;
+            transform: translateX(5px);
+            color: #4f46e5;
+        }
+
+        .resource-link::before {
+            content: '→';
+            margin-right: 10px;
+            color: #4f46e5;
+            font-weight: bold;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 20px;
+            }
+
+            .header {
+                background: #4f46e5 !important;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .section {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #e2e8f0;
+            }
+
+            .resource-link {
+                color: #1a1a1a;
+                background: none;
+                padding: 8px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 15px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .section {
+                padding: 20px;
+            }
+        }
+
+        .progress-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            padding: 0 20px;
+        }
+
+        .progress-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+
+        .progress-step::after {
+            content: '';
+            height: 2px;
+            width: 100%;
+            background: #e2e8f0;
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            z-index: 0;
+        }
+
+        .progress-step:last-child::after {
+            display: none;
+        }
+
+        .step-number {
+            width: 30px;
+            height: 30px;
+            background: #4f46e5;
+            color: white;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Machine Learning, Deep Learning & GenerativeAI Roadmap</h1>
+            <p>A comprehensive guide to mastering AI technologies</p>
+        </header>
+
+        <div class="progress-indicator">
+            <div class="progress-step">
+                <div class="step-number">1</div>
+                <div>Foundations</div>
+            </div>
+            <div class="progress-step">
+                <div class="step-number">2</div>
+                <div>ML</div>
+            </div>
+            <div class="progress-step">
+                <div class="step-number">3</div>
+                <div>DL</div>
+            </div>
+            <div class="progress-step">
+                <div class="step-number">4</div>
+                <div>Advanced</div>
+            </div>
+            <div class="progress-step">
+                <div class="step-number">5</div>
+                <div>GenAI</div>
+            </div>
+            <div class="progress-step">
+                <div class="step-number">6</div>
+                <div>Projects</div>
+            </div>
+            <div class="progress-step">
+                <div class="step-number">7</div>
+                <div>Deploy</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>1. Foundations: Math & Programming</h2>
+            <div class="resources">
+                <a href="https://www.coursera.org/specializations/mathematics-machine-learning" class="resource-link">Mathematics for Machine Learning (Coursera)</a>
+                <a href="https://www.coursera.org/learn/probability-intro" class="resource-link">Introduction to Probability and Data (Duke)</a>
+                <a href="https://www.khanacademy.org" class="resource-link">Khan Academy - Linear Algebra, Calculus, Probability</a>
+                <a href="https://www.coursera.org/specializations/python" class="resource-link">Python for Everybody (Michigan)</a>
+                <a href="https://www.codecademy.com/learn/learn-python" class="resource-link">Learn Python on Codecademy</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>2. ML Fundamentals</h2>
+            <div class="resources">
+                <a href="https://www.coursera.org/learn/machine-learning-with-python" class="resource-link">Machine Learning with Python (IBM)</a>
+                <a href="https://www.coursera.org/learn/machine-learning" class="resource-link">Machine Learning by Andrew Ng</a>
+                <a href="https://www.oreilly.com/library/view/hands-on-machine-learning" class="resource-link">Hands-On Machine Learning Book</a>
+                <a href="https://www.datacamp.com" class="resource-link">DataCamp Courses</a>
+                <a href="https://www.kaggle.com" class="resource-link">Kaggle Projects</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>3. Deep Learning Essentials</h2>
+            <div class="resources">
+                <a href="https://www.coursera.org/specializations/deep-learning" class="resource-link">Deep Learning Specialization</a>
+                <a href="https://www.deeplearningbook.org" class="resource-link">Deep Learning Book (Goodfellow et al.)</a>
+                <a href="https://www.coursera.org/learn/introduction-tensorflow" class="resource-link">Introduction to TensorFlow</a>
+                <a href="https://course.fast.ai" class="resource-link">Fast.ai Practical Deep Learning</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>4. Advanced Deep Learning</h2>
+            <div class="resources">
+                <a href="https://www.coursera.org/specializations/generative-adversarial-networks-gans" class="resource-link">GAN Specialization</a>
+                <a href="http://cs231n.stanford.edu" class="resource-link">Stanford CS231n</a>
+                <a href="https://jalammar.github.io/illustrated-transformer" class="resource-link">The Illustrated Transformer</a>
+                <a href="https://www.oreilly.com/library/view/natural-language-processing/9781098103246" class="resource-link">NLP with Transformers Book</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>5. Generative AI</h2>
+            <div class="resources">
+                <a href="https://www.coursera.org/learn/generative-ai-with-llms" class="resource-link">Introduction to Generative AI (Google)</a>
+                <a href="https://huggingface.co/course/chapter1/1" class="resource-link">The Hugging Face Course</a>
+                <a href="https://arxiv.org/abs/2105.05233" class="resource-link">Diffusion Models Paper</a>
+                <a href="https://www.coursera.org/specializations/reinforcement-learning" class="resource-link">Reinforcement Learning Specialization</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>6. Project-Based Learning</h2>
+            <div class="resources">
+                <a href="https://www.kaggle.com/competitions" class="resource-link">Kaggle Competitions</a>
+                <a href="https://github.com" class="resource-link">GitHub</a>
+                <a href="https://paperswithcode.com" class="resource-link">Papers with Code</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>7. Deployment</h2>
+            <div class="resources">
+                <a href="https://www.udacity.com/course/deployment-of-machine-learning-models--cd12721" class="resource-link">ML Deployment Course (Udacity)</a>
+                <a href="https://fullstackdeeplearning.com" class="resource-link">Full Stack Deep Learning</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
